@@ -1,0 +1,24 @@
+.main{
+    transition: border-color 0.3s ease;
+}
+
+.main:hover {
+  border-color: blue;
+
+}
+
+
+.custom-element {
+  transition: border-color 0.3s ease;
+}
+
+.custom-element:hover {
+  border-color: blue;
+}
+
+
+
+.Applied_Filter{
+ font-size: 18px;
+  font-weight: 600;
+}

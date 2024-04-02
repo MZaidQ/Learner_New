@@ -1,0 +1,386 @@
+.filterdropdownline {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .filterdropdown {
+    height: 0;
+    overflow: hidden;
+    transition: 0.2s;
+  }
+  
+  .filterdropdown.show {
+    /* overflow: auto; */
+    padding: 0.5rem;
+    height: 200px;
+  }
+  
+  .filter-list-container {
+    padding: 0;
+    margin-bottom: 10px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: var(--whiteColor);
+    height: 307px;
+  }
+  
+  .filter-list-container .filter-option {
+    padding: 9px 13px;
+    margin-bottom: 0;
+    font-weight: 700;
+    cursor: pointer;
+    color: #383838;
+    position: relative;
+    text-transform: uppercase;
+  }
+  
+  .filter-list-container .filter-option .icon {
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    width: 11px;
+    height: 11px;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: -137px -51px;
+    transition: 0.2s all;
+  }
+  
+  .filter-list-container .filter-option .icon {
+    background: url(https://static.collegedekho.com/static-up/images/college-listing-icons.6b4b3a924ef4.png)
+      no-repeat 0 0;
+  }
+  
+  .advance-filter-main {
+    display: none;
+  }
+  .filterBox {
+    width: 280px;
+    height: 250px;
+    overflow-y: scroll;
+    padding: 10px;
+    border: 0.5px solid #c4c4c4;
+    border-radius: 0px !important;
+  }
+  .filterDoneBtn,
+  .filter_header {
+    display: none;
+  }
+  
+  
+  .searchFilter {
+    width: 98%;
+    height: 40px;
+    margin: 2px auto;
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    border: 0.5px solid #717171;
+    border-radius: 4px;
+    padding: 6px 12px;
+    background-color: #f4f4f7;
+  }
+  
+  
+  @media screen and (max-width: 480px) {
+    .advance-filter-main {
+      display: block;
+      position: relative;
+      width: 100%;
+      text-align: -webkit-right;
+    }
+  
+    .advance-filter {
+      width: 50%;
+      /* position: absolute; */
+      top: 0%;
+      right: 0%;
+      color: black;
+      background: white;
+      border-radius: 25px;
+      padding: 0.5rem;
+      text-align: end;
+      border: 1px solid #ccc;
+      font-weight: bold;
+      color: #3f53d9;
+      box-shadow: 0 3px 9px rgb(0 0 0 / 13%);
+    }
+  
+    .filterdropdown {
+      width: 65%;
+    }
+  
+    .filterdropdownline {
+      width: 30%;
+    }
+  
+    .filterdropdown.show {
+      /* overflow: auto; */
+      display: none;
+      padding: 0.5rem;
+      height: auto;
+      position: absolute;
+      left: 31%;
+      top: 60px;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .advance-filter-main {
+      display: block;
+      position: relative;
+      width: 100%;
+      text-align: -webkit-right;
+    }
+  
+    .advance-filter {
+      width: fit-content;
+      /* position: absolute; */
+      top: 0%;
+      right: 0%;
+      color: black;
+      background: white;
+      border-radius: 25px;
+      padding: 0.5rem;
+      text-align: end;
+      border: 1px solid #ccc;
+      font-weight: bold;
+      color: #3f53d9;
+      box-shadow: 0 3px 9px rgb(0 0 0 / 13%);
+      margin-top: 10px;
+    }
+  
+    .filterdropdown {
+      width: 65%;
+    }
+  
+    .filterdropdownline {
+      width: 30%;
+      border: 0.1px solid #717171;
+      padding: 10px;
+      border-top: 0;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .advance-filter-main {
+      display: block;
+      position: relative;
+      width: 100%;
+      text-align: -webkit-right;
+    }
+  
+    .filterdropdown.show {
+      /* overflow: auto; */
+      display: none;
+      padding: 0.5rem;
+      height: auto;
+      position: absolute;
+      left: 31%;
+      top: 60px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .arrowIcon {
+      transition: all 0.3s ease-in-out;
+      transform: rotate(-90deg);
+    }
+  
+    .arrowIconDown {
+      transition: all 0.3s ease-in-out;
+      transform: rotate(-90deg);
+    }
+  
+    .mobileShowZones,
+    .mobileShowRatings,
+    .mobileShowCourses {
+      display: block !important;
+    }
+  
+    .filter-body {
+      position: relative;
+    }
+  
+    .activeZones,
+    .activeRatings,
+    .activeCourses {
+      border-left: 3px solid blue !important;
+      border-right: 0 !important;
+    }
+  
+    .activeZones p,
+    .activeRatings p,
+    .activeCourses p,
+    .activeZones span,
+    .activeRatings span,
+    .activeCourses span {
+      color: blue;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .custom_footer .cmp-name {
+      text-align: center;
+    }
+  
+    .filter_header {
+      display: flex;
+  
+      justify-content: space-between;
+      padding: 15px 10px !important;
+      align-items: center;
+      border-bottom: 0.1px solid #717171 !important;
+      height: 60px;
+    }
+  
+    .filter_title {
+      display: flex;
+      width: fit-content;
+      align-items: center;
+      gap: 5px;
+    }
+  
+    .filter-reset {
+      color: blue;
+      font-size: small;
+    }
+  
+    .filter_container {
+      position: fixed !important;
+      top: -100%;
+      width: 100%;
+      height: 100vh;
+      z-index: 1051;
+      background-color: white;
+      overflow: hidden;
+    }
+  
+    .filter_container > div {
+      display: flex;
+      height: auto;
+      align-items: baseline;
+      border: none;
+      height: auto;
+      width: 96%;
+      margin: 0 !important;
+      padding: 0;
+    }
+  
+    .filter_open {
+      top: 0;
+      left: 0;
+      animation: FilterBox 0.5s forwards;
+      overflow-y: scroll;
+      padding: 0;
+  
+      height: 100%;
+    }
+  
+    @keyframes FilterBox {
+      0% {
+        top: -100%;
+      }
+  
+      100% {
+        top: 0;
+      }
+    }
+  
+    .filter_close {
+      top: -100%;
+      animation: FilterBoxClose 0.5s forwards;
+    }
+  
+    @keyframes FilterBoxClose {
+      0% {
+        top: 0%;
+      }
+  
+      100% {
+        top: -100%;
+      }
+    }
+  
+    .feeFilter {
+      width: 90% !important;
+      margin: auto !important;
+      position: absolute;
+      left: 20px;
+      top: 40%;
+    }
+  
+    .filterDoneBtn {
+      display: block;
+      width: 96% !important;
+      border-radius: 10px;
+      background-color: #3f53d9;
+      color: white;
+      text-align: center;
+      padding: 10px !important;
+      align-items: center;
+      justify-content: center;
+      bottom: 20px;
+      position: absolute;
+    }
+  
+    #filterBtn {
+      margin-left: 2% !important;
+    }
+    .arrowIcon {
+      transition: all 0.3s ease-in-out;
+      transform: rotate(-90deg);
+    }
+  
+    .arrowIconDown {
+      transition: all 0.3s ease-in-out;
+      transform: rotate(-90deg);
+    }
+  
+    .mobileShowZones,
+    .mobileShowRatings,
+    .mobileShowCourses {
+      display: block !important;
+    }
+  
+    .filter-body {
+      position: relative;
+    }
+  
+    .activeZones,
+    .activeRatings,
+    .activeCourses {
+      border-left: 3px solid blue !important;
+      border-right: 0 !important;
+    }
+  
+    .activeZones p,
+    .activeRatings p,
+    .activeCourses p,
+    .activeZones span,
+    .activeRatings span,
+    .activeCourses span {
+      color: blue;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .custom_footer .custom-row .custom-col {
+      width: 100%;
+      padding-left: 0rem;
+    }
+  
+    .custom_footer ul::before {
+      top: unset;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+    }
+  }
+  
